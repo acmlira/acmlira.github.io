@@ -1,0 +1,166 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 40%;
+    .branding {
+        margin-top: 16em;
+        margin-bottom: 4em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .title {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-right: 1em;
+            text-align: center;
+            h1 {
+                font-size: 5em;
+                font-family: $secondary-font-family; 
+            }
+            h2 {
+                font-size: 1.05em;
+                color: $secondary-text-color;
+            }
+        }
+        .avatar {
+            display: inline-block;
+            position: relative;
+            z-index : 1;
+            visibility: visible;
+            .photo {
+                width: 13em; 
+                height: 13em;
+                border-radius: 50%;
+                position: relative;
+                margin-top: auto;
+                margin-bottom: auto;
+                object-fit: cover;
+                object-position: center right;
+                border: 5px solid $secondary-color;
+                z-index: 2;
+                
+            }
+            .circuit {
+                position: absolute; 
+                z-index: 0;
+                width: 9.75em;
+                height: 9.75em;
+                -webkit-mask-size: cover;
+                mask-size  : cover;
+                -webkit-mask-image: url("/assets/images/circuit.svg");
+                mask-image: url("/assets/images/circuit.svg");
+                animation: .5s frames infinite ease;
+                background-color: $secondary-color;
+            }
+            .left {
+                bottom: 0.975em; 
+                left: -3em;
+                -webkit-transform: rotate(-45deg);
+                animation: pulse 3.3s infinite;
+            }
+            .right {
+                top: -2.6em;  
+                right: -1.95em;
+                animation: pulse 4s infinite;
+            }
+            .social-media {
+                position: absolute;
+                .github {
+                    position: absolute;
+                    height: 2.6em;
+                    width: 2.6em;
+                    background-color: $secondary-color;
+                    border-radius: 50%;
+                    top: -2em;
+                    left: 12em;
+                    a {
+                        position: absolute;
+                        z-index: 3;
+                        width: 2.6em;
+                        height: 2.6em;
+                        border-radius: 50%;
+                        -webkit-mask-size: cover;
+                        mask-size  : cover;
+                        -webkit-mask-image: url("/assets/images/github.svg");
+                        mask-image: url("/assets/images/github.svg");
+                        animation: 1s frames infinite ease;
+                        background-color: $third-color;
+                        &:hover {
+                            background-color: $fourth-color;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+                .telegram {
+                    position: absolute;
+                    height: 2.6em;
+                    width: 2.6em;
+                    background-color: $third-color;
+                    border-radius: 50%;
+                    top: -5.5em;
+                    left: 14.3em;
+                    a {
+                        position: absolute;
+                        z-index: 3;
+                        width: 1.5em;
+                        height: 1.5em;
+                        top: 0.5em;
+                        left: 0.5em;
+                        -webkit-mask-size: cover;
+                        mask-size  : cover;
+                        -webkit-mask-image: url("/assets/images/telegram.svg");
+                        mask-image: url("/assets/images/telegram.svg");
+                        animation: 1s frames infinite ease;
+                        background-color: $secondary-color;
+                    }
+                    &:hover {
+                        background-color: $fourth-color;
+                        transition: 0.5s;
+                    }
+                }
+                .linkedin {
+                    position: absolute;
+                    height: 2.6em;
+                    width: 2.6em;
+                    background-color: $third-color;
+                    border-radius: 50%;
+                    top: -10em;
+                    left: 14.4em;
+                    a {
+                        position: absolute;
+                        z-index: 3;
+                        width: 1.6em;
+                        height: 1.6em;
+                        top: 0.5em;
+                        left: 0.5em;
+                        -webkit-mask-size: cover;
+                        mask-size  : cover;
+                        -webkit-mask-image: url("/assets/images/linkedin.svg");
+                        mask-image: url("/assets/images/linkedin.svg");
+                        animation: 1s frames infinite ease;
+                        background-color: $secondary-color;
+                    }
+                    &:hover {
+                        background-color: $fourth-color;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@keyframes pulse {
+    0% {
+        background-color: $secondary-color;
+    }
+    50% {
+        background-color: $primary-color;
+    }
+    100% {
+        background-color: $secondary-color;
+    }
+}
