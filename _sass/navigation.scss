@@ -8,7 +8,7 @@ nav {
         @include responsive-font(1);
         display: flex;
         justify-content: space-between;
-        padding: 1vw 0;
+        padding: 1ch 0;
         margin: 0 auto;
         .pages {
             display: flex;
@@ -16,29 +16,17 @@ nav {
             justify-content: center;
             .item { 
                 display: inline-block;
-                margin-right: 1rem;
+                margin-right: 1.5ch;
                 font-family: $primary-font-family;
                 font-weight: 200;
                 color: $third-text-color;
                 &:hover {
                     color: $primary-text-color;
-                    transition: 0.3s;
+                    transition: 0.5s;
                 }
             }
             #current {
                 color: $primary-text-color;
-            }
-        }
-        .cv {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a {
-                @include responsive-font(1.5);
-                color: $third-text-color;
-                i {
-                    color: inherit;
-                }
             }
         }
         .social-media {
@@ -49,7 +37,7 @@ nav {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-left: 1rem;
+                margin-left: .75ch;
                 a {
                     color: $third-text-color;
                     border-radius: 50%;

@@ -6,7 +6,7 @@ header{
     @include responsive-width;
     .branding {
         @include responsive-margin-top(1);
-        margin-bottom: 6vw;
+        @include responsive-margin-bottom(.5);
         width: 100%;
         display: flex;
         justify-content: space-between;
