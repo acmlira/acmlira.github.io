@@ -1,29 +1,51 @@
 nav {
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     width: 100%;
     background-color: $primary-color;
     .container {
+        @include responsive-width;
+        @include responsive-font(1);
         display: flex;
-        justify-content: flex-end;
-        padding: 1em;
-        font-size: 1.5em;
-        width: 40%;
+        justify-content: space-between;
+        padding: 1.2rem 0;
         margin: 0 auto;
-        .item {
-            margin-left: 1ch;
-            margin-right: 1ch;
-            font-family: $primary-font-family;
-            font-weight: 200;
-            color: $third-text-color;
-            display: inline-block;
-            &:hover {
+        .pages {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .item { 
+                display: inline-block;
+                margin-right: .7vw;
+                font-family: $primary-font-family;
+                font-weight: 200;
+                color: $third-text-color;
+                &:hover {
+                    color: $primary-text-color;
+                    transition: 0.3s;
+                }
+            }
+            #current {
                 color: $primary-text-color;
-                transition: 0.3s;
             }
         }
-        #current {
-            color: $primary-text-color;
+        .social-media {
+            @include responsive-font(1.4);
+            display: flex;
+            justify-content: center;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 1vw;
+                a {
+                    color: $third-text-color;
+                    &:hover {
+                        color: $primary-text-color;
+                        transition: 0.5s;
+                    }
+                }
+            }
         }
     }
     -webkit-box-shadow: 10px 10px 40px 8px rgba(0,0,0,0.3);
