@@ -6,7 +6,6 @@ main {
     justify-content: space-evenly;
     margin: auto;
     blockquote {
-        margin: 2.25vw auto;
         font-family:Open Sans;
         color: $primary-text-color;
         padding:1.2vw 1.95vw 1.2vw 2.8vw;
@@ -30,4 +29,8 @@ main {
             content: '';
         }
     }
+}
+
+main * {
+    margin-bottom: 3rem;
 }

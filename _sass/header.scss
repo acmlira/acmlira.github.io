@@ -6,7 +6,7 @@ header{
     @include responsive-width;
     .branding {
         @include responsive-margin-top(1);
-        margin-bottom: 4vw;
+        margin-bottom: 6vw;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -17,11 +17,11 @@ header{
             text-align: center;
             margin-right: 1vw;
             h1 {
-                @include responsive-font(2.4);
+                @include responsive-font(3);
                 font-family: $secondary-font-family; 
             }
             h2 {
-                @include responsive-font(.5);
+                @include responsive-font(.625);
                 color: $secondary-text-color;
             }
         }
@@ -31,7 +31,7 @@ header{
             z-index : 1;
             visibility: visible;
             .photo {
-                @include responsive-square(1);
+                @include responsive-square(.8);
                 border-radius: 50%;
                 position: relative;
                 margin-top: auto;
