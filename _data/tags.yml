@@ -1,0 +1,12 @@
+- name: C
+  emoji: "&#128295;"
+  link: /
+- name: C++
+  emoji: "&#128297;"
+  link: /
+- name: Skia
+  emoji: "&#x1F3A8;"
+  link: /
+- name: TotalCross
+  emoji: "&#10060;"
+  link: /
