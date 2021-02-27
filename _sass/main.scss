@@ -5,7 +5,6 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     margin: auto;
-    margin-bottom: 6rem;
 
     img {
         max-width: 80%;
@@ -19,11 +18,7 @@ main {
         list-style: none;
         margin-left: 0;
         padding-left: 1.2em;
-
-        li {
-            margin-top: 0.3em;
-            line-height: 1.2em;
-        }
+        padding-bottom: 1.2em;
 
         li:before {
             content: ">";
@@ -31,7 +26,7 @@ main {
             font-family: $secondary-font-family;
             font-weight: 600;
             color: $glow-primary-color;
-            left: 0;
+            left: 0em;
         }
     }
 
@@ -41,11 +36,7 @@ main {
         counter-reset: elementcounter;
         margin-left: 0;
         padding-left: 1.2em;
-
-        li {
-            margin-top: 0.3em;
-            line-height: 1.2em;
-        }
+        margin-bottom: 1.2em;
 
         li:before {
             content: counter(elementcounter) ". ";
@@ -54,7 +45,7 @@ main {
             font-weight: 600;
             color: $glow-primary-color;
             position: absolute;
-            left: 0;
+            left: 0em;
         }
 
         ol {
@@ -64,11 +55,6 @@ main {
             margin-left: 0;
             padding-left: 1.2em;
     
-            li {
-                margin-top: 0.3em;
-                line-height: 1.2em;
-            }
-    
             li:before {
                 content: counter(elementcounter, upper-roman) ". ";
                 counter-increment: elementcounter;
@@ -76,7 +62,7 @@ main {
                 font-weight: 600;
                 color: $glow-primary-color;
                 position: absolute;
-                left: 0;
+                left: 0em;
             }
         }
     }
@@ -95,54 +81,80 @@ main {
         color: $glow-third-color;
     }
 
-    h1, h2, h3, h4, p, blockquote, li {
-        margin-bottom: 1rem;
-    }
-
-    p:last-child {
-        margin-bottom: 0;
+    h1, h2, h3, h4, p, blockquote {
+        padding-bottom: 1.2em;
     }
 
     h1, h2, h3, h4 {
         font-family: $secondary-font-family;
-        margin-top: 1rem;
+        padding-top: 1.2em;
+        text-decoration: none;
+    }
+
+    li {
+        ol {
+            margin-bottom: 0;
+            li:last-child {
+                padding-bottom: 0em;
+            }
+        }
+        
     }
 
     h1 {
         font-size: 1.4em;
-        line-height: 1.6em;
+        position: relative;
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: 0.01em;
+            top: 0em;
+            background-color:  $third-color;
+        }
+    }
+
+    h1:first-child {
+        &::before {
+            background-color:  #0000;
+        }
     }
 
     h2 {
         font-size: 1.6em;
-        line-height: 1.8em;
     }
 
     h3 {
         font-size: 1.8em;
-        line-height: 2em;
     }
 
     h4 {
         font-size: 2em;
-        line-height: 2.2em;
     }
 
     p, li{
         font-size: 1em;
-        line-height: 1.2em;
+        line-height: 1.8em;
+        a {
+            color: $glow-fourth-color;
+            font-style: normal;
+            font-weight: 600;
+            text-decoration: underline;
+        }
     }
 
     hr {
-        height: .1em;
+        height: 0.01em;
         padding: 0;
-        margin: 1.2em 0;
+        margin:  0 0 1.2em 0;
         background-color: $third-color;
         border: 0;
     }
 
     .tags {
         display: flex;
+        padding-bottom: 1.2em;
         .tag {
             background-color: $third-color;
             padding: 0.5em;
@@ -151,7 +163,7 @@ main {
         }
     }
 
-    .card {
+    .card, .post {
         @include responsive-margin-bottom(.3);
     }
 
@@ -160,11 +172,12 @@ main {
         font-style: italic;
         font-weight: 300;
         color: $primary-text-color;
-        padding:1.2em 1.95em 1.2em 2.8em;
+        padding:0 1.95em 0 2.8em;
         border-left: .7em solid $fourth-color;
         position: relative;
         background:$fifth-color;
         border-radius: .4vw;
+        margin-bottom: 1.2em;
         &::before {
             font-family: Arial;
             content: "\201C";
@@ -177,18 +190,17 @@ main {
         &::after {
             content: '';
         }
+        p:first-child {
+            padding-top: 1.2em;
+        }
     }
 
     .post-card {
         padding: 1.2em;
         background:$secondary-color;
-        border-radius: .4vw;
         font-family:Open Sans;
         color: $primary-text-color;
         border: 0.2vw solid $third-color;
-        blockquote {
-            margin: .6em 0;
-        }
     }
 
     .title {
@@ -203,31 +215,32 @@ main {
 
 
     .post, .post-card {
+        border-radius: .4vw;
         text-align: justify;
-        padding: 1.2em;
+        padding: 0 1.2em;
         background:$secondary-color;
         h4 {
             font-size: 1.4em;
-            line-height: 1.6em;
         }
     
         h3 {
             font-size: 1.6em;
-            line-height: 1.8em;
         }
     
         h2 {
             font-size: 1.8em;
-            line-height: 2em;
         }
     
         h1 {
             font-size: 2em;
-            line-height: 2.2em;
         }
     }
 
-    .code {
-
+    code {
+        font-style: normal;
+        font-family: $third-font-family;
+        background-color: $fourth-color;
+        border-radius: .3em;
+        padding: .2em;
     }
 }

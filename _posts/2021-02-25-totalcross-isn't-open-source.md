@@ -4,7 +4,7 @@ author: Allan César
 tags: ["TotalCross"]
 ---
 Hey guys let's take back a few months ago when `totalcross` became an open source project.
->This text was written to be a TotalCross / totalcross issue a few months ago.
+>This text was written to be a `TotalCross/totalcross` issue a few months ago.
 
 ![image](https://media1.tenor.com/images/cc0861c13322fc1f71736128811d5a14/tenor.gif?itemid=4584294)
 

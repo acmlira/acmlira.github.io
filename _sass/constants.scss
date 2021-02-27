@@ -9,11 +9,11 @@ $primary-text-color: #fffffff3;
 $secondary-text-color: #5a5a5af3;
 $third-text-color: #999999f3;
 // Fonts
-$primary-font-family: 'Open Sans';
-$secondary-font-family: 'Lato';
-$third-font-family: 'Satisfy';
-$fourth-font-family: 'Rock Salt';
+$primary-font-family: 'Open Sans', sans-serif;
+$secondary-font-family: 'Lato', serif;
+$third-font-family: 'Fira Code', monospace;
 // Glow colors
 $glow-primary-color: rgb(255, 185, 0);
 $glow-secondary-color: rgb(0, 255, 185);
-$glow-third-color: rgb(185, 0, 255);
+$glow-third-color: rgb(210, 50, 255);
+$glow-fourth-color: rgb(50, 105, 255)

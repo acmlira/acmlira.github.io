@@ -21,7 +21,15 @@
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
+        width: 45%;
+    }
+
+    @media only screen and (min-width: 1666px) {
         width: 40%;
+    }
+
+    @media only screen and (min-width: 2000px) {
+        width: 35%;
     }
 }
 
