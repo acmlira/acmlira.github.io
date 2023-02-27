@@ -1,0 +1,14 @@
+<nav>
+    <li class="container">
+        <div class="pages">
+            {% for item in site.data.navigation %}
+            <a href="{{ item.link }}" class="item" {% if page.url == item.link %}id="current"{% endif %}>{{ item.name | downcase}}</a>
+            {% endfor %}
+        </div>
+        <ul class="social-media">
+            <li class="telegram-parent"><a href="#" class="fa fa-github-square"></a></li>
+            <li class="github-parent"  ><a href="#" class="fa fa-linkedin-square"></a></li>
+            <li class="linkedin-parent"><a href="#" class="fa fa-twitter-square"></a></li>
+        </ul>
+    </li>
+</nav>

@@ -1,0 +1,246 @@
+main {
+    @include responsive-width;
+    @include responsive-font(.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+
+    img {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    ul {
+        position: relative;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 1.2em;
+        padding-bottom: 1.2em;
+
+        li:before {
+            content: ">";
+            position: absolute;
+            font-family: $secondary-font-family;
+            font-weight: 600;
+            color: $glow-primary-color;
+            left: 0em;
+        }
+    }
+
+    ol {
+        position: relative;
+        list-style-type: none;
+        counter-reset: elementcounter;
+        margin-left: 0;
+        padding-left: 1.2em;
+        margin-bottom: 1.2em;
+
+        li:before {
+            content: counter(elementcounter) ". ";
+            counter-increment: elementcounter;
+            font-family: $secondary-font-family;
+            font-weight: 600;
+            color: $glow-primary-color;
+            position: absolute;
+            left: 0em;
+        }
+
+        ol {
+            position: relative;
+            list-style-type: none;
+            counter-reset: elementcounter;
+            margin-left: 0;
+            padding-left: 1.2em;
+    
+            li:before {
+                content: counter(elementcounter, upper-roman) ". ";
+                counter-increment: elementcounter;
+                font-family: $secondary-font-family;
+                font-weight: 600;
+                color: $glow-primary-color;
+                position: absolute;
+                left: 0em;
+            }
+        }
+    }
+
+    i, em {
+        font-family: $primary-font-family;
+        font-style: italic;
+        font-weight: 300;
+        color: $glow-secondary-color;
+    }
+
+    b, strong {
+        font-family: $primary-font-family;
+        font-style: normal;
+        font-weight: 700;
+        color: $glow-third-color;
+    }
+
+    h1, h2, h3, h4, p, blockquote {
+        padding-bottom: 1.2em;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: $secondary-font-family;
+        padding-top: 1.2em;
+        text-decoration: none;
+    }
+
+    li {
+        ol {
+            margin-bottom: 0;
+            li:last-child {
+                padding-bottom: 0em;
+            }
+        }
+        
+    }
+
+    h1 {
+        font-size: 1.4em;
+        position: relative;
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: 0.01em;
+            top: 0em;
+            background-color:  $third-color;
+        }
+    }
+
+    h1:first-child {
+        &::before {
+            background-color:  #0000;
+        }
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    h4 {
+        font-size: 2em;
+    }
+
+    p, li{
+        font-size: 1em;
+        line-height: 1.8em;
+        a {
+            color: $glow-fourth-color;
+            font-style: normal;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+
+    hr {
+        height: 0.01em;
+        padding: 0;
+        margin:  0 0 1.2em 0;
+        background-color: $third-color;
+        border: 0;
+    }
+
+    .tags {
+        display: flex;
+        padding-bottom: 1.2em;
+        .tag {
+            background-color: $third-color;
+            padding: 0.5em;
+            margin-right: 1ch;
+            border-radius: .4vw;
+        }
+    }
+
+    .card, .post {
+        @include responsive-margin-bottom(.3);
+    }
+
+    blockquote {
+        font-family:Open Sans;
+        font-style: italic;
+        font-weight: 300;
+        color: $primary-text-color;
+        padding:0 1.95em 0 2.8em;
+        border-left: .7em solid $fourth-color;
+        position: relative;
+        background:$fifth-color;
+        border-radius: .4vw;
+        margin-bottom: 1.2em;
+        &::before {
+            font-family: Arial;
+            content: "\201C";
+            color:$fourth-color;
+            font-size:4em;
+            position: absolute;
+            left: .5vw;
+            top:0.1vw;
+        }
+        &::after {
+            content: '';
+        }
+        p:first-child {
+            padding-top: 1.2em;
+        }
+    }
+
+    .post-card {
+        padding: 1.2em;
+        background:$secondary-color;
+        font-family:Open Sans;
+        color: $primary-text-color;
+        border: 0.2vw solid $third-color;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .info {
+        text-align: right;
+        font-style: italic;
+        color: $third-text-color;
+    }
+
+
+    .post, .post-card {
+        border-radius: .4vw;
+        text-align: justify;
+        padding: 0 1.2em;
+        background:$secondary-color;
+        h4 {
+            font-size: 1.4em;
+        }
+    
+        h3 {
+            font-size: 1.6em;
+        }
+    
+        h2 {
+            font-size: 1.8em;
+        }
+    
+        h1 {
+            font-size: 2em;
+        }
+    }
+
+    code {
+        font-style: normal;
+        font-family: $third-font-family;
+        background-color: $fourth-color;
+        border-radius: .3em;
+        padding: .2em;
+    }
+}

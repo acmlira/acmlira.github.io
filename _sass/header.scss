@@ -1,0 +1,82 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    @include responsive-width;
+    .branding {
+        @include responsive-margin-top(1);
+        @include responsive-margin-bottom(.5);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .title {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin-right: 1vw;
+            h1 {
+                @include responsive-font(3);
+                font-family: $secondary-font-family; 
+            }
+            h2 {
+                @include responsive-font(.625);
+                color: $secondary-text-color;
+            }
+        }
+        .avatar {
+            display: inline-block;
+            position: relative;
+            z-index : 1;
+            visibility: visible;
+            .photo {
+                @include responsive-square(.8);
+                border-radius: 50%;
+                position: relative;
+                margin-top: auto;
+                margin-bottom: auto;
+                object-fit: cover;
+                object-position: center right;
+                border: 0.2vw solid $secondary-color;
+                z-index: 2;
+                
+            }
+            .circuit {
+                position: absolute; 
+                z-index: 0;
+                width: 8vw;
+                height: 8vw;
+                -webkit-mask-size: cover;
+                mask-size  : cover;
+                -webkit-mask-image: url("/assets/images/circuit.svg");
+                mask-image: url("/assets/images/circuit.svg");
+                animation: .5s frames infinite ease;
+                background-color: $secondary-color;
+            }
+            .left {
+                bottom: 2vw; 
+                left: -2.4vw;
+                -webkit-transform: rotate(-30deg);
+                animation: pulse 3.3s infinite;
+            }
+            .right {
+                top: -2vw;  
+                right: -3vw;
+                animation: pulse 4s infinite;
+            }
+        }
+    } 
+}
+
+@keyframes pulse {
+    0% {
+        background-color: $secondary-color;
+    }
+    50% {
+        background-color: $primary-color;
+    }
+    100% {
+        background-color: $secondary-color;
+    }
+}

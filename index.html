@@ -1,0 +1,41 @@
+---
+layout: default
+title: Home
+---
+<main>
+    <div class="container">
+        <div class="card">
+            <blockquote>
+                <h1>Hi i'm Allan!</h1>
+                <ul>
+                    <li>Software developer focused on <b>Linux</b>, Embedded Systems, DevOps and Building Tools.</li>
+                    <li>Languages I speak: C/C++, Java, JavaScript, Python, TypeScript and Shell Script.</li>
+                    <li>Tools I like to use: CMake, Docker and AWS.</li>
+                    <li>Open source contributor & <i>pixel wizard</i>.</li>
+                    <li>I love dogs &#128021;</li>
+                </ul>
+            </blockquote>
+        </div>
+        {% for post in site.posts %}
+        <div class="card">
+            <div class="post-card">
+                <a href="{{ post.url }}">
+                    <h1>{{ post.title }}</h1>
+                </a>
+                <hr>
+                {{ post.excerpt }}
+                <hr>
+                <div class="tags">
+                {% for ptag in post.tags %}
+                {% for dtag in site.data.tags %}
+                {% if dtag.name == ptag %}
+                    <div class="tag">{{ dtag.emoji }} {{ dtag.name }}</div>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>

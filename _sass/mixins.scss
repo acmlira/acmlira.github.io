@@ -1,0 +1,147 @@
+@mixin responsive-width {
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        width: 80%;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        width: 70%;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        width: 60%;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        width: 50%;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        width: 45%;
+    }
+
+    @media only screen and (min-width: 1666px) {
+        width: 40%;
+    }
+
+    @media only screen and (min-width: 2000px) {
+        width: 35%;
+    }
+}
+
+@mixin responsive-font ($size) {
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        font-size: $size*3vw;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        font-size: $size*2.6vw;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        font-size: $size*2.2vw;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        font-size: $size*1.6vw;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        font-size: $size*1.4vw;
+    }
+}
+
+@mixin responsive-square ($size) {
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        width: $size*25vw; 
+        height: $size*25vw;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        width: $size*20vw; 
+        height: $size*20vw;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        width: $size*17.5vw; 
+        height: $size*17.5vw;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        width: $size*15rem; 
+        height: $size*15rem;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        width: $size*10vw; 
+        height: $size*10vw;
+    }
+}
+
+@mixin responsive-margin-top ($size) {
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        margin-top: $size*24vw;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        margin-top: $size*21vw;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        margin-top: $size*18vw;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        margin-top: $size*15vw;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        margin-top: $size*12vw;
+    }
+}
+
+@mixin responsive-margin-bottom ($size) {
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        margin-bottom: $size*24vw;
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        margin-bottom: $size*21vw;
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        margin-bottom: $size*18vw;
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        margin-bottom: $size*15vw;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        margin-bottom: $size*12vw;
+    }
+}
